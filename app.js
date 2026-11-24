@@ -205,6 +205,10 @@ function renderAnswer(id) {
                 <span class="system-badge">${escapeHtml(item.selfService.label)}</span>
               </div>
             ` : ""}
+
+            ${item.details && item.details.length ? item.details.map((d) => `
+              <div class="details-card">${escapeHtml(d)}</div>
+            `).join("") : ""}
           </div>
 
           <div class="answer-side">
